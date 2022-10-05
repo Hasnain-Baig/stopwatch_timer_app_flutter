@@ -22,107 +22,110 @@ class _InputAlertBoxState extends State<InputAlertBox> {
           style: TextStyle(color: Colors.white),
         )),
       ),
-      content: Column(
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            width: 200,
-            padding: EdgeInsets.all(5),
-            color: Colors.black,
-            child: Center(
-              child: Text(
-                "Hours",
-                style: TextStyle(color: Colors.white),
-              ),
+      content: SingleChildScrollView(
+        physics: ScrollPhysics(),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * .5,
-            child: TextField(
-              cursorColor: Colors.black,
-              decoration: InputDecoration(
-                hintText: "Enter Hours",
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
+            Container(
+              width: 200,
+              padding: EdgeInsets.all(5),
+              color: Colors.black,
+              child: Center(
+                child: Text(
+                  "Hours",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-              autofocus: true,
-              onChanged: (value) {
-                try {
-                  data["inpHours"] = int.parse(value);
-                } catch (e) {
-                  data["inpHours"] = 404;
-                }
-              },
             ),
-          ),
-          SizedBox(height: 50),
-          Container(
-            width: 200,
-            padding: EdgeInsets.all(5),
-            color: Colors.black,
-            child: Center(
-              child: Text(
-                "Minutes",
-                style: TextStyle(color: Colors.white),
+            Container(
+              width: MediaQuery.of(context).size.width * .5,
+              child: TextField(
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  hintText: "Enter Hours",
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+                autofocus: true,
+                onChanged: (value) {
+                  try {
+                    data["inpHours"] = int.parse(value);
+                  } catch (e) {
+                    data["inpHours"] = 404;
+                  }
+                },
               ),
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * .5,
-            child: TextField(
-              cursorColor: Colors.black,
-              decoration: InputDecoration(
-                hintText: "Enter Minutes",
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
+            SizedBox(height: 50),
+            Container(
+              width: 200,
+              padding: EdgeInsets.all(5),
+              color: Colors.black,
+              child: Center(
+                child: Text(
+                  "Minutes",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-              autofocus: true,
-              onChanged: (value) {
-                try {
-                  data["inpMins"] = int.parse(value);
-                } catch (e) {
-                  data["inpMins"] = 404;
-                }
-              },
             ),
-          ),
-          SizedBox(height: 50),
-          Container(
-            width: 200,
-            padding: EdgeInsets.all(5),
-            color: Colors.black,
-            child: Center(
-              child: Text(
-                "Seconds",
-                style: TextStyle(color: Colors.white),
+            Container(
+              width: MediaQuery.of(context).size.width * .5,
+              child: TextField(
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  hintText: "Enter Minutes",
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+                autofocus: true,
+                onChanged: (value) {
+                  try {
+                    data["inpMins"] = int.parse(value);
+                  } catch (e) {
+                    data["inpMins"] = 404;
+                  }
+                },
               ),
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * .5,
-            child: TextField(
-              cursorColor: Colors.black,
-              decoration: InputDecoration(
-                hintText: "Enter Seconds",
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
+            SizedBox(height: 50),
+            Container(
+              width: 200,
+              padding: EdgeInsets.all(5),
+              color: Colors.black,
+              child: Center(
+                child: Text(
+                  "Seconds",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-              autofocus: true,
-              onChanged: (value) {
-                try {
-                  data["inpSecs"] = int.parse(value);
-                } catch (e) {
-                  data["inpSecs"] = 404;
-                } // data = value as int;
-              },
             ),
-          ),
-        ],
+            Container(
+              width: MediaQuery.of(context).size.width * .5,
+              child: TextField(
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  hintText: "Enter Seconds",
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+                autofocus: true,
+                onChanged: (value) {
+                  try {
+                    data["inpSecs"] = int.parse(value);
+                  } catch (e) {
+                    data["inpSecs"] = 404;
+                  } // data = value as int;
+                },
+              ),
+            ),
+          ],
+        ),
       ),
       actions: [
         ElevatedButton(
